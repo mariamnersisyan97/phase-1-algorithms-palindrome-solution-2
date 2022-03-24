@@ -1,9 +1,23 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // racecar 7/2 = 3.5
+  // aaaaaa 6/2 = 3
+  for (let i = 0; i < word.length /2; i++){
+    //check each letter to the corresponding letter from the end
+    const j = word.length -1 -i;
+    const startChar = word[i];
+    const endChar = word[j];
+    if (startChar !== endChar) return false;
+  }
+  return true;
 }
 
 /* 
   Add your pseudocode here
+  Iterate from the beginning to the middle
+    Check each character to the corresponding letter from the end
+      if any letters don't match, return false
+    
+  return true
 */
 
 /*
